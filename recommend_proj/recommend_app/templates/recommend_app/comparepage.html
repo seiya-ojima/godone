@@ -11,9 +11,9 @@
     {% for history in historys %}
     <table>
         <tr><th scope="col">商品名</th><td>{{ history.name }}</td></tr>
-        <tr><th scope="col">値段</th><td>{{history.product_price}}</td><th scope="col">評価1</th><td>{{histoty.price_score }}%</td></tr>
-        <tr><th scope="col">サイズ</th><td>{{history.product_size}}</td><th scope="col">評価2</th><td>{{ history.price_score }}%</td></tr>
-        <tr><th scope="col">メモリ</th><td>{{history.product_memory}}</td><th scope="col">評価3</th><td>{{ history.size_score }}%</td></tr>
+        <tr><th scope="col">値段</th><td>{{history.product_price}}</td><th scope="col">価格評価</th><td>{{ history.price_score }}%</td></tr>
+        <tr><th scope="col">サイズ</th><td>{{history.product_size}}</td><th scope="col">サイズ評価</th><td>{{ history.size_score }}%</td></tr>
+        <tr><th scope="col">メモリ</th><td>{{history.product_memory}}</td><th scope="col">メモリ評価</th><td>{{ history.memory_score }}%</td></tr>
     </table>
     {% endfor %}
 </body>

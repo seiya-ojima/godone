@@ -10,9 +10,9 @@
     <h1>商品評価ページ</h1>
     <table>
         <tr><th scope="col">商品名</th><td>{{ result.name }}</td></tr>
-        <tr><th scope="col">値段</th><td>{{result.product_price}}</td><th scope="col">評価1</th><td>{{price_score }}%</td></tr>
-        <tr><th scope="col">サイズ</th><td>{{result.product_size}}</td><th scope="col">評価2</th><td>{{ price_score }}%</td></tr>
-        <tr><th scope="col">メモリ</th><td>{{result.product_memory}}</td><th scope="col">評価3</th><td>{{ size_score }}%</td></tr>
+        <tr><th scope="col">値段</th><td>{{result.product_price}}</td><th scope="col">価格評価</th><td>{{result.price_score }}%</td></tr>
+        <tr><th scope="col">サイズ</th><td>{{result.product_size}}</td><th scope="col">サイズ評価</th><td>{{result.size_score }}%</td></tr>
+        <tr><th scope="col">メモリ</th><td>{{result.product_memory}}</td><th scope="col">メモリ評価</th><td>{{result.memory_score }}%</td></tr>
     </table>
     <button onclick="location.href='compare'">比較する</button>
     <!-- <button action="." method="get">比較する</button> -->

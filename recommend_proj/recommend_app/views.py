@@ -19,10 +19,11 @@ def frontpage(request):
 
 def evaluationpage(request):
     result = Parameter.objects.all().last()
-    price_score = round(result.product_price/(result.max_price - result.min_price)*100)
-    size_score = round(result.product_size/(result.max_size - result.min_size)*100)
-    memory_score = round(result.product_memory/(result.max_memory - result.min_memory)*100)
-    return render(request, "recommend_app/evaluationpage.html", {"result":result, "price_score":price_score, "size_score":size_score, "memory_score":memory_score})
+    # result.price_score = round(result.product_price/(result.max_price - result.min_price)*100)
+    # result.size_score = round(result.product_size/(result.max_size - result.min_size)*100)
+    # result.memory_score = round(result.product_memory/(result.max_memory - result.min_memory)*100)
+    result.save()
+    return render(request, "recommend_app/evaluationpage.html", {"result":result})
 
 def comparepage(request):
     historys = Parameter.objects.all()
